@@ -4,8 +4,14 @@ function Home({ events }) {
 
     return (
         <>
-            <h1>This is the home page</h1>
-            <p>This is the home page info</p>
+            <input type="text" placeholder="what do you want to see?" />
+            <select>
+                <option value="Manhattan">Manhattan</option>
+                <option value="Queens">Queens</option>
+                <option value="Brooklyn">Brooklyn</option>
+                <option value="Staten Island">Staten Island</option>
+                <option value="Bronx">Bronx</option>
+            </select>
             <EventContainer events={events} />
         </>
     )
