@@ -1,0 +1,13 @@
+.Header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: blanchedalmond;
+}
+
+.Aside {
+    display: flex;
+    height: 200px;
+    justify-content: left;
+    background-color: blanchedalmond;
+}
