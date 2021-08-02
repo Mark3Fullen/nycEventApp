@@ -38,11 +38,13 @@ function App() {
           </li>
         </ul>
       </aside>
-      <BrowserRouter>
-        <Route path="/">
-          <Home events={events} />
-        </Route>
-      </BrowserRouter>
+        <div className="Content">
+          <BrowserRouter>
+            <Route path="/">
+              <Home events={events} />
+            </Route>
+          </BrowserRouter>
+        </div>
     </div>
 
   );

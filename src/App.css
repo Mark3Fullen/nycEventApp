@@ -6,8 +6,12 @@
 }
 
 .Aside {
-    display: flex;
-    height: 200px;
-    justify-content: left;
     background-color: blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Content {
+    text-align: center;
+    float: center;
 }
