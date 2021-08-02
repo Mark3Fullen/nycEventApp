@@ -13,9 +13,10 @@ function App() {
         return res.json()
       })
       .then(json => {
-        setEvents(json)
+        setEvents([...new Map(json.map(event => [event.event_id, event])).values()])
       })
   }, [])
+
   // console.log(events.map(event => console.log(event)))
 
 
