@@ -29,13 +29,13 @@ function App() {
       <aside className="Aside">
         <ul>
           <li>
-            Link 1
+            Sports
           </li>
           <li>
-            Link 2
+            Music
           </li>
           <li>
-            Link 3
+            Construction
           </li>
         </ul>
       </aside>
