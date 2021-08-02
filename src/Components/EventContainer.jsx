@@ -5,7 +5,7 @@ function EventContainer({ events }) {
 
     return (<div>
         <h1> Event Container </h1>
-        {events.map(event => <EventCard event={event} />)}
+        {events.map(event => <EventCard key={event.event_id} event={event} />)}
     </div>)
 
 }
