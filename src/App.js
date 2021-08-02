@@ -16,7 +16,9 @@ function App() {
         setEvents(json)
       })
   }, [])
-  console.log(events)
+  // console.log(events.map(event => console.log(event)))
+
+
 
   return (
     <div className="App">
@@ -38,7 +40,7 @@ function App() {
       </aside>
       <BrowserRouter>
         <Route path="/">
-          <Home />
+          <Home events={events} />
         </Route>
       </BrowserRouter>
     </div>
