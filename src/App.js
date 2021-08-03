@@ -4,6 +4,7 @@ import './App.css';
 import Home from './Components/Home'
 import Sports from './Components/Sports'
 import Music from './Components/Music'
+import Construction from './Components/Construction';
 import Nav from "./Components/Nav"
 
 function App() {
@@ -52,9 +53,9 @@ function App() {
 
         <div className="Content">
           <BrowserRouter>
-          <aside className="Aside">
-      <Nav/>
-      </aside>
+            <aside className="Aside">
+            <Nav/>
+            </aside>
             <Route exact path="/">
               <Home events={filteredEvents} />
             </Route>
@@ -63,6 +64,9 @@ function App() {
             </Route>
             <Route path="/music">
               <Music exact events={filteredEvents}/>
+            </Route>
+            <Route path="/construction">
+              <Construction exact events={filteredEvents}/>
             </Route>
           </BrowserRouter>
         </div>
