@@ -1,7 +1,7 @@
 import EventCard from "./EventCard"
 
 function EventContainer({ events }) {
-    console.log(events)
+    // console.log(events)
 
     return (<div>
         <h1> Event Container </h1>
