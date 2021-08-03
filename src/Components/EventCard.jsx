@@ -13,7 +13,7 @@
 function EventCard({ event
 }) {
 
-    return (<div>
+    return (<div key={event.event_id}>
         <h2>{event.event_name}</h2>
         <h3>{event.event_borough}</h3>
         <h4>{event.event_location}</h4>
