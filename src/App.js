@@ -9,17 +9,9 @@ function App() {
 
   useEffect(() => {
     fetch('https://data.cityofnewyork.us/resource/tvpp-9vvx.json')
-      .then(res => {
-        return res.json()
-      })
-      .then(json => {
-        setEvents([...new Map(json.map(event => [event.event_id, event])).values()])
-      })
-  }, [])
-
-  // console.log(events.map(event => console.log(event)))
-
-
+      .then(res => {return res.json()})
+      .then(json => {setEvents([...new Map(json.map(event => [event.event_id, event])).values()])})},
+       [])
 
   return (
     <div className="App">

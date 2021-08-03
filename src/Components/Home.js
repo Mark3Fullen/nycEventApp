@@ -13,9 +13,7 @@ function Home({ events }) {
         setSearchBarValue(e)
     }
 
-    console.log(searchBarValue)
-
-    const filteredEvents = events.filter(event => event.event_borough.includes(dropDownValue) ) && events.filter(event => event.event_name.toLowerCase().includes(searchBarValue.toLowerCase()) )
+    const filteredEvents = events.filter(event => event.event_borough.includes(dropDownValue) && event.event_name.toLowerCase().includes(searchBarValue.toLowerCase())) 
 
     return (
         <>
