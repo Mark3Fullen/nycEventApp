@@ -4,6 +4,7 @@ import './App.css';
 import Home from './Components/Home'
 import Sports from './Components/Sports'
 import Music from './Components/Music'
+import Nav from "./Components/Nav"
 
 function App() {
 
@@ -47,22 +48,13 @@ function App() {
           </select>
         </div>
 
-      <aside className="Aside">
-        <ul>
-          <li>
-            Sports
-          </li>
-          <li>
-            Music
-          </li>
-          <li>
-            Construction
-          </li>
-        </ul>
-      </aside>
+    
 
         <div className="Content">
           <BrowserRouter>
+          <aside className="Aside">
+      <Nav/>
+      </aside>
             <Route exact path="/">
               <Home events={filteredEvents} />
             </Route>
