@@ -11,7 +11,14 @@
     flex-wrap: wrap;
 }
 
-.Content {
+.Directory {
     text-align: center;
     float: center;
+}
+
+.cardStyle {
+    display: inline-block;
+    border: 3px dotted grey;
+    width: 300px;
+    padding: 10px;
 }

@@ -5,6 +5,7 @@ import Home from './Components/Home'
 import Sports from './Components/Sports'
 import Music from './Components/Music'
 import Construction from './Components/Construction';
+import Food from './Components/Food';
 import Nav from "./Components/Nav"
 
 function App() {
@@ -51,23 +52,28 @@ function App() {
 
     
 
-        <div className="Content">
+        <div className="Directory">
           <BrowserRouter>
             <aside className="Aside">
-            <Nav/>
+              <Nav/>
             </aside>
+            <div className="Content">
             <Route exact path="/">
               <Home events={filteredEvents} />
             </Route>
             <Route path="/sports">
-              <Sports exact events={filteredEvents}/>
+              <Sports events={filteredEvents}/>
             </Route>
             <Route path="/music">
-              <Music exact events={filteredEvents}/>
+              <Music events={filteredEvents}/>
             </Route>
             <Route path="/construction">
-              <Construction exact events={filteredEvents}/>
+              <Construction events={filteredEvents}/>
             </Route>
+            <Route path="/food">
+              <Food events={filteredEvents}/>
+            </Route>
+            </div>
           </BrowserRouter>
         </div>
 
