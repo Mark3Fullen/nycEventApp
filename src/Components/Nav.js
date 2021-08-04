@@ -7,6 +7,7 @@ return (<nav>
     <NavLink to= "/music">Music</NavLink>
     <NavLink to= "/construction">Construction</NavLink>
     <NavLink to= "/food">Food</NavLink>
+    <NavLink to= "/KidsYouth">Kids/Youth</NavLink>
 </nav>
 )
 }

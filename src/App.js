@@ -7,6 +7,7 @@ import Music from './Components/Music'
 import Construction from './Components/Construction';
 import Food from './Components/Food';
 import Nav from "./Components/Nav"
+import KidsYouth from "./Components/KidsYouth"
 
 function App() {
 
@@ -14,9 +15,12 @@ function App() {
 
   useEffect(() => {
     fetch('https://data.cityofnewyork.us/resource/tvpp-9vvx.json')
-      .then(res => {return res.json()})
-      .then(json => {setEvents([...new Map(json.map(event => [event.event_id, event])).values()])})},
-       [])
+      .then(res => {
+        return res.json()
+      })
+      .then(json => { setEvents(json.filter( event => Date.parse(event.start_date_time) > Date.parse(new Date())).sort(function(a,b){ return Date.parse(a.start_date_time) - Date.parse(b.start_date_time)}))
+      })
+  }, [])
 
       const [dropDownValue, setDropDownValue] = useState('')
       const [searchBarValue, setSearchBarValue] = useState('')
@@ -72,6 +76,9 @@ function App() {
             </Route>
             <Route path="/food">
               <Food events={filteredEvents}/>
+            </Route>
+            <Route path="/KidsYouth">
+              <KidsYouth events={filteredEvents}/>
             </Route>
             </div>
           </BrowserRouter>
