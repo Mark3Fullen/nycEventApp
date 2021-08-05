@@ -10,6 +10,7 @@ import Nav from "./Components/Nav"
 import KidsYouth from "./Components/KidsYouth"
 import SortBurough from "./Components/SortBurough"
 import Search from "./Components/Search"
+import Grid from '@material-ui/core/Grid'
 
 function App() {
 
@@ -47,8 +48,10 @@ function App() {
         <div className="Directory">
           <BrowserRouter>
               <Nav/>
-             <div> <Search searchHandler={searchHandler} />
-            <SortBurough  dropDownHandler = {dropDownHandler}/></div>
+              <Grid>
+                <Search searchHandler={searchHandler} />
+                <SortBurough  dropDownHandler = {dropDownHandler}/>
+            </Grid>
             <div className="Content">
             <Route exact path="/">
               <Home events={filteredEvents} />

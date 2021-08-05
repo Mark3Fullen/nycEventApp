@@ -1,14 +1,15 @@
 import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import Grid from '@material-ui/core/Grid'
 
 function SortBurough({ dropDownHandler }) {
   
-return ( <div>
+return ( <Grid item>
 <FormControl >
         
         <NativeSelect
-          value={''}
+          // value={''}
           onChange={e =>  dropDownHandler(e.target.value)}
           inputProps={{
             name: 'burough',
@@ -24,6 +25,6 @@ return ( <div>
             <option value="Bronx">Bronx</option>
         </NativeSelect>
         <FormHelperText>Sort by Burough</FormHelperText>
-      </FormControl> </div>)}
+      </FormControl> </Grid>)}
 
 export default SortBurough
