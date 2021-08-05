@@ -12,7 +12,7 @@ return (<div style={{width:"100%"}}>
     
     <AppBar position="static" style={{marginBottom: "12px"}}>
         
-        <Tabs value={tabValue}  onChange={handleTabs} >
+        <Tabs value={tabValue}  onChange={handleTabs} centered>
             <Tab label ="Home" to='/' component={Link}/>
             <Tab label ="Sports" to='/sports' component={Link}/>
             <Tab label ="Music" to='/music' component={Link}/>

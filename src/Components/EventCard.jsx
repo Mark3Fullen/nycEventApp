@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button'
 import Icon from '@material-ui/core/Icon';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
     root: {
@@ -41,12 +42,20 @@ function EventCard({ event }) {
         setLikes(likes + 1)}
         return (
 <Grid item >
-        <Card variant="outlined" className={classes.root}>
-            <CardHeader></CardHeader>
-            <h2>{event.event_name}</h2>
-            <h3>{event.event_borough}</h3>
-            <h4>{event.event_location}</h4>
-            <h4>{event.start_date_time}</h4>
+        <Card variant="outlined" className={classes.root} elevation={2}>
+            <CardHeader title = {event.event_name}
+            subheader = {event.event_borough}/>
+            <CardContent>
+<Typography>
+{event.event_location}
+</Typography>
+            </CardContent>
+            <CardContent>
+<Typography>
+{event.start_date_time}
+</Typography>
+            </CardContent>
+            
             <Button endIcon={<FavoriteBorderIcon/>} size="small" variant="contained" color="primary"
              onClick= {incrementalLikes}>Likes {likes}</Button>
             </Card>

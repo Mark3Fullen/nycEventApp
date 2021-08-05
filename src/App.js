@@ -11,6 +11,14 @@ import KidsYouth from "./Components/KidsYouth"
 import SortBurough from "./Components/SortBurough"
 import Search from "./Components/Search"
 import Grid from '@material-ui/core/Grid'
+import { Typography } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    padding: "30px",
+    }})
 
 function App() {
 
@@ -38,12 +46,19 @@ function App() {
 
       const filteredEvents = events.filter(event => event.event_borough.includes(dropDownValue) && event.event_name.toLowerCase().includes(searchBarValue.toLowerCase()))
 
+      
+      const classes = useStyles()
+
   return (
     <div className="App">
-      <header className="Header">
-        <h1>Welcome to the Borough!</h1>
-       
-      </header>
+      <Card className= {classes.root}>
+      <Typography variant="h2" component="h1" align="center">
+        NYC Park Events
+      </Typography>
+      <Typography variant="h5"  align="center">
+        find events through issued permits
+      </Typography>
+      </Card>
 
         <div className="Directory">
           <BrowserRouter>
