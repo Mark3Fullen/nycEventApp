@@ -8,6 +8,8 @@ import Construction from './Components/Construction';
 import Food from './Components/Food';
 import Nav from "./Components/Nav"
 import KidsYouth from "./Components/KidsYouth"
+import SortBurough from "./Components/SortBurough"
+import Search from "./Components/Search"
 
 function App() {
 
@@ -39,28 +41,18 @@ function App() {
     <div className="App">
       <header className="Header">
         <h1>Welcome to the Borough!</h1>
+       
       </header>
 
-        <div>
-          <input type="text" placeholder="what do you want to see?" onChange={e => searchHandler(e.target.value)}/>
-
-          <select onChange={e => dropDownHandler(e.target.value)}>
-            <option value=''>All Boroughs</option>
-            <option value="Manhattan">Manhattan</option>
-            <option value="Queens">Queens</option>
-            <option value="Brooklyn">Brooklyn</option>
-            <option value="Staten Island">Staten Island</option>
-            <option value="Bronx">Bronx</option>
-          </select>
-        </div>
+        
 
     
 
         <div className="Directory">
           <BrowserRouter>
-            <aside className="Aside">
               <Nav/>
-            </aside>
+             <div> <Search searchHandler={searchHandler} />
+            <SortBurough  dropDownHandler = {dropDownHandler}/></div>
             <div className="Content">
             <Route exact path="/">
               <Home events={filteredEvents} />
