@@ -44,10 +44,6 @@ function App() {
        
       </header>
 
-        
-
-    
-
         <div className="Directory">
           <BrowserRouter>
               <Nav/>
