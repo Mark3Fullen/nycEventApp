@@ -8,6 +8,7 @@ import Construction from './Components/Construction';
 import Food from './Components/Food';
 import Nav from "./Components/Nav"
 import KidsYouth from "./Components/KidsYouth"
+import All from "./Components/All"
 import SortBurough from "./Components/SortBurough"
 import Search from "./Components/Search"
 import Grid from '@material-ui/core/Grid'
@@ -66,7 +67,7 @@ function App() {
               <Grid>
                 <Search searchHandler={searchHandler} />
                 <SortBurough  dropDownHandler = {dropDownHandler}/>
-            </Grid>
+              </Grid>
             <div className="Content">
             <Route exact path="/">
               <Home events={filteredEvents} />
@@ -85,6 +86,9 @@ function App() {
             </Route>
             <Route path="/KidsYouth">
               <KidsYouth events={filteredEvents}/>
+            </Route>
+            <Route path="/All">
+              <All events={filteredEvents}/>
             </Route>
             </div>
           </BrowserRouter>
