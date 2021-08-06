@@ -19,7 +19,6 @@ return (<div style={{width:"100%"}}>
             <Tab label ="Construction" to='/construction' component={Link} />
             <Tab label ="Food" to='/food' component={Link} />
             <Tab label ="Kids" to='/KidsYouth' component={Link} />
-            <Tab label ="All" to='/All' component={Link} />
         </Tabs>
         
     </AppBar>
